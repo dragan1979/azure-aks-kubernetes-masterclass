@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: draganazureakskubernetesmasterclass 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: draganazureakskubernetesmasterclass
+  template:
+    metadata:
+      labels:
+        app: draganazureakskubernetesmasterclass 
+    spec:
+      containers:
+        - name: draganazureakskubernetesmasterclass 
+          image: myregistry2025.azurecr.io/draganazureakskubernetesmasterclass
+          ports:
+          - containerPort: 80
